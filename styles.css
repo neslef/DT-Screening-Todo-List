@@ -1,11 +1,12 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
   margin: 0;
+  background-color: #f4f4f4;
 }
 
 .todo-container {
@@ -13,11 +14,13 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
 input {
-  width: 80%;
+  width: calc(100% - 70px); /* Adjust width for input and button */
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -26,12 +29,13 @@ input {
 
 button {
   padding: 10px;
-  width: 15%;
+  width: 60px;
   border: none;
   background-color: #28a745;
   color: white;
   cursor: pointer;
   border-radius: 4px;
+  margin-left: 10px;
 }
 
 button:hover {
@@ -41,6 +45,7 @@ button:hover {
 ul {
   list-style: none;
   padding: 0;
+  margin-top: 20px;
 }
 
 li {
@@ -49,6 +54,7 @@ li {
   align-items: center;
   padding: 8px;
   border-bottom: 1px solid #ccc;
+  font-size: 16px;
 }
 
 li.completed {
@@ -68,4 +74,24 @@ button.delete {
 
 button.delete:hover {
   background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .todo-container {
+    padding: 15px;
+    width: 90%;
+  }
+
+  input {
+    width: calc(100% - 50px); /* Adjust input field width on smaller screens */
+  }
+
+  button {
+    width: 45px;
+  }
+
+  li {
+    font-size: 14px; /* Make text smaller on smaller screens */
+  }
 }
