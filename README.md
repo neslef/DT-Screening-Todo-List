@@ -7,3 +7,5 @@ Downloaded Git, Notepad++, Tortoise.
 Researched on how to start coding for HTML, CSS and Javascript.
 Added and pushed all necessary commits while editing codes.
 Encountered issues editing the file name of the HTML file. Updated the file name to index.html.
+Modified mobile responsiveness.
+Tested locally.
